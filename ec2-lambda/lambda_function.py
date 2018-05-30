@@ -50,3 +50,4 @@ def lambda_handler(event, context):
     if not [element for element in dbs if element['name'] == db_name]:
         client.create_database(db_name)
     out = client.write_points(json_body, None, db_name)
+    return out 
